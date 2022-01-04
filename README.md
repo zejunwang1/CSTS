@@ -167,7 +167,7 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 
 ```
 推进集体林权制度改革		推进集体林权制度改革需要分区域逐步施行		neutral
-推进集体林权制度改革		对旧有的林权制度进行调整	entailment
+推进集体林权制度改革		对旧有的林权制度进行调整    entailment
 推进集体林权制度改革		林权为私人所有		contradiction
 ```
 
