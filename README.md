@@ -1,9 +1,5 @@
 # CSTS
-中文自然语言推理与语义相似度数据集
-
 ## 中文自然语言推理与语义相似度数据集汇总
-
-大家好，我是泽军。今天给大家介绍一下中文自然语言推理与文本语义相似度任务中常用的数据集：
 
 - 哈工大 LCQMC 数据集
 - AFQMC 蚂蚁金融语义相似度数据集
@@ -216,4 +212,30 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 
 #### CINLID 中文成语语义推理数据集
 
-中文成语语义推理数据集（Chinese Idioms Natural Language Inference Dataset）收集了91,247个由人工撰写的成语对（含少量歇后语、俗语等短文本），通过人工标注的方式进行平衡分类，标签为entailment、contradiction和neutral，支持自然语言推理（NLI）的任务。
+中文成语语义推理数据集（Chinese Idioms Natural Language Inference Dataset）收集了 91,247 个由人工撰写的成语对（含少量歇后语、俗语等短文本），通过人工标注的方式进行平衡分类，标签为 entailment、contradiction 和 neutral，支持自然语言推理（NLI）的任务。
+
+原始数据集以 json 的形式存在，每一行即一条数据，每一条数据包含 sentence1、sentence2、和 label 三个字段，label 的取值范围为 entailment、contradiction 和 neutral。
+
+```json
+{"sentence1":"拾陈蹈故","sentence2":"因循守旧","label":"entailment"}
+{"sentence1":"稀奇古怪","sentence2":"平淡无奇","label":"contradiction"}
+{"sentence1":"沉滓泛起","sentence2":"凤泊鸾飘","label":"neutral"}
+```
+
+笔者将原始数据转化成形如 LCQMC 三列的格式，预览如下：
+
+```
+拾陈蹈故	因循守旧	entailment
+稀奇古怪	平淡无奇	contradiction
+沉滓泛起	凤泊鸾飘	neutral
+```
+
+该数据可用于：
+
+- 测试语义模型的语义理解能力；
+- 用于微调预训练模型以获得良好的语句表示，能较好的捕捉语义相关性。
+
+原始数据集链接：https://www.heywhale.com/mw/dataset/608a8c45d0bc41001722dc37/content
+
+
+
