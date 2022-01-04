@@ -1,5 +1,4 @@
-# CSTS
-## 中文自然语言推理与语义相似度数据集汇总
+# 中文自然语言推理与语义相似度数据集
 
 - 哈工大 LCQMC 数据集
 - AFQMC 蚂蚁金融语义相似度数据集
@@ -11,10 +10,6 @@
 - Chinese-SNLI 自然语言推理数据集
 - OCNLI 中文原版自然语言推理数据集
 - CINLID 中文成语语义推理数据集
-
-以上数据集被汇总整理在 GitHub 仓库中：https://github.com/zejunwang1/CSTS
-
-
 
 ### 语义相似度
 
@@ -28,17 +23,13 @@ LCQMC 是哈尔滨工业大学在自然语言处理国际顶会 COLING2018 构�
 大家觉得她好看吗	大家觉得跑男好看吗？		0
 ```
 
-训练集、验证集和测试集的数量统计如下表所示：
-
-
-
 原始数据集链接：http://icrc.hitsz.edu.cn/Article/show/171.html
 
 #### AFQMC 蚂蚁金融语义相似度数据集
 
 AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数据集，用于问题相似度计算。即：给定客服里用户描述的两句话，用算法来判断是否表示了相同的语义。每一条数据有三个属性，分别是句子1，句子2，句子相似度标签。标签 "1" ：表示两个句子的语义类似；"0"：表示两个句子的语义不同。
 
-原始数据为 json 格式，笔者将其处理成形如 LCQMC 三列的格式，每列之间使用 '\t' 分隔：
+原始数据为 json 格式，本仓库将其处理成形如 LCQMC 三列的格式，每列之间使用 '\t' 分隔：
 
 ```
 花呗消费超过额度有什么影响吗	花呗额度成负数有啥影响吗	1
@@ -46,27 +37,19 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 花呗一次性付款有限制吗		解除花呗支付限制	0
 ```
 
-训练集、验证集和测试集的数量统计如下表所示：
-
-
-
 原始数据集链接：https://tianchi.aliyun.com/dataset/dataDetail?dataId=106411
 
 #### OPPO 小布对话文本语义匹配数据集
 
 该数据集通过对闲聊、智能客服、影音娱乐、信息查询等多领域真实用户交互语料进行用户信息脱敏、相似度筛选处理得到，数据主要特点是文本较短、非常口语化、存在文本高度相似而语义不同的难例。该数据集所有标签都有经过人工精标确认。
 
-原始数据为 json 格式，笔者将其处理成形如 LCQMC 三列的格式，每列之间使用 '\t' 分隔：
+原始数据为 json 格式，本仓库将其处理成形如 LCQMC 三列的格式，每列之间使用 '\t' 分隔：
 
 ```
 我真的超级生气		气死我了	1
 你生日是几月几日	你的老师生日是几月几日		0
 打电话给爱老公		给爱老公打电话		1
 ```
-
-训练集、验证集和测试集的数量统计如下表所示：
-
-
 
 原始数据集链接：https://tianchi.aliyun.com/competition/entrance/531851/introduction
 
@@ -81,10 +64,6 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 ```
 
 每条数据包含4列，分别表示数据 id，sentence1，sentence2 和 label，每列之间使用 '\t' 分隔。
-
-训练集、验证集和测试集的数量统计如下表所示：
-
-
 
 原始数据集链接：https://github.com/google-research-datasets/paws
 
@@ -113,10 +92,6 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 一个人一只手握着一只小动物。	一个男人在炫耀一只小猴子。	1
 ```
 
-训练集、验证集和测试集的数量统计如下表所示：
-
-
-
 原始数据集链接：https://github.com/pluto-junzeng/CNSD
 
 ### 自然语言推理
@@ -132,7 +107,7 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 {"sentence1": "他们整合计划以提高效率并更有效地部署资源。", "sentence2": "提高效率的计划得到了巩固，因为他们非常关心效率。", "label": "-"}
 ```
 
-原始的每条数据为 json 格式，包含三个属性：sentence1、sentence2 和 label 标签，其中 label 标签有三种：entailment、neutral、contradiction。笔者将原始数据转化成形如 LCQMC 三列的格式，并去除了极少部分标签为 "-" 的数据，处理后的数据预览如下：
+原始的每条数据为 json 格式，包含三个属性：sentence1、sentence2 和 label 标签，其中 label 标签有三种：entailment、neutral、contradiction。本仓库将原始数据转化成形如 LCQMC 三列的格式，并去除了极少部分标签为 "-" 的数据，处理后的数据预览如下：
 
 ```
 我们设法找出各机构在过去5年中普遍采用的做法。		我们想找出机构在过去5年中经常使用的做法。	entailment
@@ -140,25 +115,17 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 很慢，现在市面上有很多更好的机器	这是最快的机器，你找不到更好的机器。	contradiction
 ```
 
-训练集、验证集和测试集的数量统计如下表所示：
-
-
-
 原始数据集链接：https://storage.googleapis.com/cluebenchmark/tasks/cmnli_public.zip
 
 #### Chinese-SNLI 自然语言推理数据集
 
-该数据集通过翻译加人工修正的方法，从英文原数据集生成，可以一定程度上缓解中文自然语言推理数据集不够的问题。该数据集的格式和 Chinese-MNLI 一致，原始的每条数据为 json 格式，笔者将其转化成形如 LCQMC 三列的格式，处理后的数据预览如下：
+该数据集通过翻译加人工修正的方法，从英文原数据集生成，可以一定程度上缓解中文自然语言推理数据集不够的问题。该数据集的格式和 Chinese-MNLI 一致，原始的每条数据为 json 格式，本仓库将其转化成形如 LCQMC 三列的格式，处理后的数据预览如下：
 
 ```
 用马和马车在花园里施肥的农民。		这个人正在给他的花园施肥。	entailment
 用马和马车在花园里施肥的农民。		那人在一片空地上，有一匹马和一辆马车。		neutral
 用马和马车在花园里施肥的农民。		那人带着他的马和马车在城里的大街上。	contradiction
 ```
-
-训练集、验证集和测试集的数量统计如下表所示：
-
-
 
 原始数据集链接：https://gitee.com/jiaodaxin/CNSD
 
@@ -196,17 +163,13 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 }
 ```
 
-笔者将原始数据转化成形如 LCQMC 三列的格式，并去除了极少部分标签为 "null" 的数据，三列分别表示 sentence1、sentence2 和 label 标签。处理后的数据预览如下：
+本仓库将原始数据转化成形如 LCQMC 三列的格式，并去除了极少部分标签为 "null" 的数据，三列分别表示 sentence1、sentence2 和 label 标签。处理后的数据预览如下：
 
 ```
 推进集体林权制度改革		推进集体林权制度改革需要分区域逐步施行		neutral
 推进集体林权制度改革		对旧有的林权制度进行调整	entailment
 推进集体林权制度改革		林权为私人所有		contradiction
 ```
-
-训练集、验证集和测试集的数量统计如下表所示：
-
-
 
 数据集原始链接：https://storage.googleapis.com/cluebenchmark/tasks/ocnli_public.zip
 
@@ -222,7 +185,7 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 {"sentence1":"沉滓泛起","sentence2":"凤泊鸾飘","label":"neutral"}
 ```
 
-笔者将原始数据转化成形如 LCQMC 三列的格式，预览如下：
+本仓库将原始数据转化成形如 LCQMC 三列的格式，预览如下：
 
 ```
 拾陈蹈故	因循守旧	entailment
