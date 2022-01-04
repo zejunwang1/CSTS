@@ -112,7 +112,7 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 ```
 我们设法找出各机构在过去5年中普遍采用的做法。		我们想找出机构在过去5年中经常使用的做法。	entailment
 在这种令人惊奇的文化融合中，有一种对连续性的热情。	对连续性的热情并不是这些文化中最重要的。	neutral
-很慢，现在市面上有很多更好的机器	这是最快的机器，你找不到更好的机器。	contradiction
+很慢，现在市面上有很多更好的机器    这是最快的机器，你找不到更好的机器。	contradiction
 ```
 
 原始数据集链接：https://storage.googleapis.com/cluebenchmark/tasks/cmnli_public.zip
