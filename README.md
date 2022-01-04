@@ -201,5 +201,5 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 原始数据集链接：https://www.heywhale.com/mw/dataset/608a8c45d0bc41001722dc37/content
 
 ### 声明
-本数据集只能用于学术研究，请勿用作商业。
+本仓库数据集只能用于学术研究，请勿用作商业。
 
