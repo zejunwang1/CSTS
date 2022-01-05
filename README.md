@@ -98,7 +98,7 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 
 #### Chinese-MNLI 自然语言推理数据集
 
-该数据集来自于中文语言理解测评基准 CLUE benchmark（https://github.com/CLUEbenchmark/CLUE），数据内容来自于 fiction、telephone、travel、government、slate 等，通过对原始的英文 MNLI 和 XNLI 数据进行翻译得到。该数据集可用于判断给定的两个句子之间属于蕴涵、中立、矛盾关系。
+该数据集来自于中文语言理解测评基准 CLUE benchmark（https://github.com/CLUEbenchmark/CLUE ），数据内容来自于 fiction、telephone、travel、government、slate 等，通过对原始的英文 MNLI 和 XNLI 数据进行翻译得到。该数据集可用于判断给定的两个句子之间属于蕴涵、中立、矛盾关系。
 
 ```json
 {"sentence1": "神圣对她来说并不神秘。", "sentence2": "女人对神圣的东西很熟悉。", "label": "entailment"}
@@ -131,7 +131,7 @@ AFQMC（Ant Financial Question Matching Corpus）蚂蚁金融语义相似度数�
 
 #### OCNLI 中文原版自然语言推理数据集
 
-原生中文自然语言推理数据集 OCNLI，是第一个非翻译的、使用原生汉语的大型中文自然语言推理数据集。该数据集来自于中文语言理解测评基准 CLUE benchmark，原始的每条数据为 json 格式：
+原生中文自然语言推理数据集 OCNLI，是第一个非翻译的、使用原生汉语的大型中文自然语言推理数据集。该数据集来自于中文语言理解测评基准 CLUE benchmark（https://github.com/CLUEbenchmark/OCNLI ），原始的每条数据为 json 格式：
 
 ```json
 {
